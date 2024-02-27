@@ -19,7 +19,7 @@ pipeline {
         stage('Deploy to Tomcat') {
             steps {
                 // Copy the war file to Tomcat webapps directory
-                deploy adapters: [tomcat8(credentialsId: 'tomcat', path: '', url: 'http://http://192.168.24.153:8081/')], contextPath: null, war: '**/*.war'
+                deploy adapters: [tomcat8(credentialsId: 'tomcat', path: '', url: 'http://http://192.168.24.153:8080/')], contextPath: null, war: '**/*.war'
             }
         }
     }
